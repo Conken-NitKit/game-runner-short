@@ -32,6 +32,11 @@
 # Visual Studio cache directory
 .vscode/
 
+# IDE cache directory
+.idea/**/workspace.xml
+.idea/**/usage.statisticsworkspace.xml
+.idea/**/tasks.xml
+
 # Gradle cache directory
 .gradle/
 
