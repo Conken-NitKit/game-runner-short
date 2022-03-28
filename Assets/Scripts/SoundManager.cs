@@ -7,20 +7,20 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField, Range(0, 1), Tooltip("マスタ音量")]
-    float volume = 1;
+    private float volume = 1;
     [SerializeField, Range(0, 1), Tooltip("BGMの音量")]
-    float bgmVolume = 1;
+    private float bgmVolume = 1;
     [SerializeField, Range(0, 1), Tooltip("SEの音量")]
-    float seVolume = 1;
+    private float seVolume = 1;
 
-    AudioClip[] bgm;
-    AudioClip[] se;
+    private AudioClip[] bgm;
+    private AudioClip[] se;
 
-    Dictionary<string, int> bgmIndex = new Dictionary<string, int>();
-    Dictionary<string, int> seIndex = new Dictionary<string, int>();
+    private Dictionary<string, int> bgmIndex = new Dictionary<string, int>();
+    private Dictionary<string, int> seIndex = new Dictionary<string, int>();
 
-    AudioSource bgmAudioSource;
-    AudioSource seAudioSource;
+    private AudioSource bgmAudioSource;
+    private AudioSource seAudioSource;
 
     public float Volume
     {
@@ -172,3 +172,4 @@ public class SoundManager : MonoBehaviour
         seAudioSource.clip = null;
     }
 }
+ 
