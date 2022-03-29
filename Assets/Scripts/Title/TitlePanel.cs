@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TitlePanel : MonoBehaviour
 {
     [SerializeField] Sprite[] sprites;
-    private Image image;
+    Image image;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class TitlePanel : MonoBehaviour
         StartCoroutine(coroutine);
     }
 
-    private IEnumerator updateImg()
+    IEnumerator updateImg()
     {
         foreach (Sprite sprite in sprites)
         {
