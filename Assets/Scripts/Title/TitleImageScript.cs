@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class TitleImageScript : MonoBehaviour
 {
     public Sprite[] sprites;
-    public float speed;
     public AudioClip se;
     private Image image;
     private float current;
+    private int SPEED = 1;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class TitleImageScript : MonoBehaviour
         int index = 0;
         while (index < sprites.Length - 1)
         {
-            current += Time.deltaTime * speed;
+            current += SPEED;
             index = (int)(current) % sprites.Length;
             if (index > sprites.Length - 1) index = sprites.Length - 1;
             image.sprite = sprites[index];
