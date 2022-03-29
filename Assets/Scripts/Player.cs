@@ -7,14 +7,16 @@ using UnityEngine;
 /// </summary>
 public class Player : MonoBehaviour
 {
-    [SerializeField]private float speed;
-    [SerializeField]private float jumpPower;
-    [SerializeField]private Rigidbody2D rb;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpPower;
+    [SerializeField] private Rigidbody2D rb;
 
- private void FixedUpdate() {
-    if(Input.GetKeyDown(KeyCode.Space)){
-        rb.AddForce(transform.up * jumpPower);
-    } 
-    rb.velocity = new Vector2(speed, rb.velocity.y);      
-  }
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(transform.up * jumpPower);
+        }
+        rb.velocity = new Vector2(speed, rb.velocity.y);
+    }
 }

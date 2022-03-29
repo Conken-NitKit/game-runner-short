@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class TitleImageScript : MonoBehaviour
 {
-    public Sprite[] sprites;
-    public AudioClip se;
+    [SerializeField] Sprite[] sprites;
+    [SerializeField] AudioClip se;
     private Image image;
 
     void Start()
