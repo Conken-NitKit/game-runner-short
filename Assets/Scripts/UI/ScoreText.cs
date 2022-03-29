@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 namespace UI
 {
@@ -11,12 +12,13 @@ namespace UI
     public class ScoreText : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI text;
-        
-        // TODO:加算アニメーションをつける
+        private int nowNumber;
+
         public void SetText(int value)
         {
-            text.text = value.ToString();
+            nowNumber = int.Parse(text.text);
+            DOTween.To(() => nowNumber, (n) => nowNumber = n, value, 1)
+                .OnUpdate(() => text.text = nowNumber.ToString("#,0"));
         }
-        
     }
 }
