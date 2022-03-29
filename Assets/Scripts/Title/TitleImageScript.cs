@@ -8,13 +8,11 @@ public class TitleImageScript : MonoBehaviour
     public Sprite[] sprites;
     public AudioClip se;
     private Image image;
-    private float current;
 
     void Start()
     {
         image = GetComponent<Image>();
         image.sprite = sprites[0];
-        current = 0f;
         GetComponent<AudioSource>().PlayOneShot(se);
         IEnumerator coroutine = updateImg();
         StartCoroutine(coroutine);
