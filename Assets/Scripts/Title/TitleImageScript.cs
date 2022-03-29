@@ -30,7 +30,7 @@ public class TitleImageScript : MonoBehaviour
             index = (int)(current) % sprites.Length;
             if (index > sprites.Length - 1) index = sprites.Length - 1;
             image.sprite = sprites[index];
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.1f);
         }
 
         Destroy(gameObject);
