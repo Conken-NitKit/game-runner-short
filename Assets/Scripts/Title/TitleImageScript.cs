@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Effect : MonoBehaviour
 {
-    static GameObject _prefab = null;
     public Sprite[] sprites;
     public float speed;
     public AudioClip se;
