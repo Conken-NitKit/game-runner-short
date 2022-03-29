@@ -12,17 +12,6 @@ public class Effect : MonoBehaviour
     private Image image;
     private float current;
 
-
-    public static void EffectAdd(float x, float y, string name)
-    {
-        GameObject prefab = Resources.Load("Prefabs/" + name) as GameObject;
-        Vector3 pos = new Vector3(x, y, 0);
-        GameObject canvas = GameObject.Find("Canvas");
-        GameObject g = Instantiate(prefab, pos, Quaternion.identity) as GameObject;
-        g.transform.SetParent(canvas.transform, false);
-        g.transform.position = pos;
-    }
-
     void Start()
     {
         image = GetComponent<Image>();
