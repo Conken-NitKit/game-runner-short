@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TitleImageScript : MonoBehaviour
+public class TitlePanel : MonoBehaviour
 {
     [SerializeField] Sprite[] sprites;
     [SerializeField] AudioClip se;
