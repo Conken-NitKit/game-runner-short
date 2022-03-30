@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class Anime : MonoBehaviour
 {
     [SerializeField] Sprite[] sprites;
-    Image image;
+    img img;
 
     void Start()
     {
-        image = GetComponent<Image>();
-        image.sprite = sprites[0];
+        img = GetComponent<img>();
+        img.sprite = sprites[0];
         IEnumerator coroutine = updateImg();
         StartCoroutine(coroutine);
     }
@@ -20,7 +20,7 @@ public class Anime : MonoBehaviour
     {
         foreach (Sprite sprite in sprites)
         {
-            image.sprite = sprite;
+            img.sprite = sprite;
             yield return new WaitForSeconds(0.1f);
         };
     }
