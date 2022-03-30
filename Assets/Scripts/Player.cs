@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
       {
         rb.AddForce(transform.up * jumpPower); 
       }
-        rb.velocity = new Vector2(speed, rb.velocity.y);
+
+      rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
     void OnCollisionStay2D(Collision2D other)
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
         isGround = true;
       }
     }
-    
+
     void OnCollisionExit2D(Collision2D other)
     {
       if(other.gameObject.tag == "Ground")
@@ -36,4 +37,4 @@ public class Player : MonoBehaviour
         isGround = false;
       }     
     }           
-} 
+}
