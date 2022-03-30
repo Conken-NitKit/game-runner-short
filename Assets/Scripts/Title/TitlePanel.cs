@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class TitlePanel : MonoBehaviour
 {
     [SerializeField] Sprite[] sprites;
-    [SerializeField] AudioClip bgm;
-    [SerializeField] AudioClip startSe;
     Image image;
 
     void Start()
