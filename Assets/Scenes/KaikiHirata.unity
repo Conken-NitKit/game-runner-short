@@ -699,7 +699,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 611bbdcbdb61c4a638ec8d563ce67dbb, type: 3}
   - {fileID: 21300000, guid: 9ea305af4d9ad46fca904c3e6ba429a0, type: 3}
   bgm: {fileID: 8300000, guid: 55058f721405a49ffbf9786d7732f0c7, type: 3}
-  startSe: {fileID: 0}
+  startSe: {fileID: 8300000, guid: aa254020b91f94c32802ab9ff3508de3, type: 3}
 --- !u!82 &1702259297
 AudioSource:
   m_ObjectHideFlags: 0
