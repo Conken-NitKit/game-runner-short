@@ -521,33 +521,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progress: 0
-  playOnEnable: 0
+  playOnEnable: 1
   playByProgress: 0
-  isLoop: 0
+  isLoop: 1
+  <isAnimating>k__BackingField: 0
   animationData:
     speed: 1
     useMaxVisibleCharacter: 0
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 1, y: 1}
     position:
-      use: 0
+      use: 1
       delay: 0
       wave: 0
-      time: 0
+      time: 1
       curve:
-        serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - time: 0
+          value: 0
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - time: 1
+          value: 1
+          inSlope: 1
+          outSlope: 1
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
       from: {x: 0, y: 0, z: 0}
-      to: {x: 0, y: 0, z: 0}
+      to: {x: 0, y: 1, z: 0}
     rotation:
       use: 0
       delay: 0
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -560,7 +575,6 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -573,7 +587,6 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -586,21 +599,51 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
       gradient:
-        serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
-        key3: {r: 0, g: 0, b: 0, a: 0}
-        key4: {r: 0, g: 0, b: 0, a: 0}
-        key5: {r: 0, g: 0, b: 0, a: 0}
-        key6: {r: 0, g: 0, b: 0, a: 0}
-        key7: {r: 0, g: 0, b: 0, a: 0}
+        key0:
+          r: 1
+          g: 1
+          b: 1
+          a: 1
+        key1:
+          r: 1
+          g: 1
+          b: 1
+          a: 1
+        key2:
+          r: 0
+          g: 0
+          b: 0
+          a: 0
+        key3:
+          r: 0
+          g: 0
+          b: 0
+          a: 0
+        key4:
+          r: 0
+          g: 0
+          b: 0
+          a: 0
+        key5:
+          r: 0
+          g: 0
+          b: 0
+          a: 0
+        key6:
+          r: 0
+          g: 0
+          b: 0
+          a: 0
+        key7:
+          r: 0
+          g: 0
+          b: 0
+          a: 0
         ctime0: 0
         ctime1: 65535
         ctime2: 0
@@ -626,7 +669,6 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -641,7 +683,6 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -656,7 +697,6 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -671,7 +711,6 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -686,7 +725,6 @@ MonoBehaviour:
       wave: 0
       time: 0
       curve:
-        serializedVersion: 2
         m_Curve: []
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -695,6 +733,11 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       tiling: {x: 0, y: 0}
       speed: {x: 0, y: 0}
+  textComponent: {fileID: 0}
+  textInfo: {textComponent: {fileID: 0}, characterCount: 0, spriteCount: 0, spaceCount: 0, wordCount: 0, linkCount: 0, lineCount: 0, pageCount: 0, materialCount: 0}
+  time: 0
+  maxTime: 0
+  characterCount: 0
 --- !u!1 &1458188544
 GameObject:
   m_ObjectHideFlags: 0
