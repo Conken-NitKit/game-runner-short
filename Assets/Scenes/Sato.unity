@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  jump: 500
+  jumpPower: 700
   rb: {fileID: 1374235866}
 --- !u!212 &1374235864
 SpriteRenderer:
