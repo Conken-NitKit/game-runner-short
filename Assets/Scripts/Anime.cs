@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TitlePanel : MonoBehaviour
+public class Anime : MonoBehaviour
 {
     [SerializeField] Sprite[] sprites;
     Image image;
