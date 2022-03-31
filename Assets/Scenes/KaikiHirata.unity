@@ -654,7 +654,7 @@ MonoBehaviour:
     position:
       use: 1
       delay: 3
-      wave: 0
+      wave: 0.125
       time: 0.25
       curve:
         serializedVersion: 2
