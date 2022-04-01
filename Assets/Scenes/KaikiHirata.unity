@@ -867,11 +867,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1702259293}
   - component: {fileID: 1702259295}
-  - component: {fileID: 1702259298}
   - component: {fileID: 1702259297}
-  - component: {fileID: 1702259299}
   - component: {fileID: 1702259296}
+  - component: {fileID: 1702259299}
   - component: {fileID: 1702259294}
+  - component: {fileID: 1702259298}
   m_Layer: 5
   m_Name: TitlePanel
   m_TagString: Untagged
