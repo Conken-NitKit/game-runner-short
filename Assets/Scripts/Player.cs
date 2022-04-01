@@ -37,4 +37,24 @@ public class Player : MonoBehaviour
             isGround = false;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            //rb.velocity = new Vector2(0, 0);
+
+            Debug.Log("GameOver");
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "GameOver")
+        {
+            //rb.velocity = new Vector2(0, 0);
+
+            Debug.Log("GameOver");
+        }
+    }
 }
