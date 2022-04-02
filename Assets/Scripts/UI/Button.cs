@@ -13,20 +13,26 @@ public class Button : MonoBehaviour
     /// </summary>
     public IEnumerator Blink()
     {
+        COLORS COLORS = new COLORS();
+
         const float DERAY = 5.0000001f;
         const float INTERVAL = 0.4583333f;
-        COLORS COLORS = new COLORS();
+
         Text TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
 
         while (true)
         {
             yield return new WaitForSeconds(DERAY);
+
             TEXT.color = COLORS.BUTTON_LIGHTED;
             yield return new WaitForSeconds(INTERVAL);
+
             TEXT.color = COLORS.BUTTON;
             yield return new WaitForSeconds(INTERVAL);
+
             TEXT.color = COLORS.BUTTON_LIGHTED;
             yield return new WaitForSeconds(INTERVAL);
+
             TEXT.color = COLORS.BUTTON;
         }
     }
