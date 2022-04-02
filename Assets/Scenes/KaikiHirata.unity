@@ -640,7 +640,7 @@ MonoBehaviour:
   progress: 0
   playOnEnable: 1
   playByProgress: 0
-  isLoop: 0
+  isLoop: 1
   animationData:
     speed: 1
     useMaxVisibleCharacter: 0
