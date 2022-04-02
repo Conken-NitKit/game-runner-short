@@ -27,4 +27,6 @@ public class Button : MonoBehaviour
             TEXT.color = COLORS.BUTTON;
         }
     }
+
+    public void Stop() { }
 }
