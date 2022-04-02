@@ -52,9 +52,6 @@ public class Button : MonoBehaviour
     /// </summary>
     public void Stop()
     {
-        IEnumerator blink;
-        blink = Blink();
-
-        StopCoroutine(blink);
+        StopCoroutine("Blink");
     }
 }
