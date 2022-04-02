@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class Button : MonoBehaviour
 {
-    void Blink()
+    public IEnumerator Blink()
     {
         const short DERAY = 5;
 
