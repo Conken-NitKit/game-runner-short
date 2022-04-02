@@ -31,5 +31,12 @@ public class Button : MonoBehaviour
         }
     }
 
-    public void Stop() { StopCoroutine(Blink); }
+    public void Stop()
+    {
+        IEnumerator blink;
+
+        blink = Blink();
+
+        StopCoroutine(blink);
+    }
 }
