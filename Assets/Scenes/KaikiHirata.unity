@@ -582,7 +582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3046\u307F\u3066\u308B\u306F\u3066\u3093\u3055\u3044"
+  m_text: "\u3046\u307F\u3066\u308B\u306F\u3066\u3093\u3055\u3044!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81e3cb1454a2944d78e04de14408a26a, type: 2}
   m_sharedMaterial: {fileID: 2506840962933346063, guid: 81e3cb1454a2944d78e04de14408a26a, type: 2}
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.1
+  m_fontSize: 67.35
   m_fontSizeBase: 113
   m_fontWeight: 400
   m_enableAutoSizing: 1
