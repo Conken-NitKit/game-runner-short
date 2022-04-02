@@ -8,4 +8,5 @@ using UnityEngine;
 public class COLORS : MonoBehaviour
 {
     public Color BUTTON = Color.white;
+    public Color BUTTON_LIGHTED = Color.yellow;
 }
