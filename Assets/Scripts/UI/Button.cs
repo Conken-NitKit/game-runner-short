@@ -12,5 +12,6 @@ public class Button : MonoBehaviour
         const short DERAY = 5;
 
         yield return new WaitForSeconds(DERAY);
+        gameObject.GetComponent<Text>().color = COLORS.BUTTON;
     }
 }
