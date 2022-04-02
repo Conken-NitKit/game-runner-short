@@ -11,6 +11,7 @@ public class Button : MonoBehaviour
     COLORS COLORS = new COLORS();
 
     Text TEXT;
+    Text Title;
 
     void Awake()
     {
