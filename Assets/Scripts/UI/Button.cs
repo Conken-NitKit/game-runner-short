@@ -11,6 +11,6 @@ public class Button : MonoBehaviour
     {
         const short DERAY = 5;
 
-        WaitForSeconds(DERAY);
+        yield return new WaitForSeconds(DERAY);
     }
 }
