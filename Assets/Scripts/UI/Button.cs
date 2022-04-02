@@ -8,6 +8,9 @@ using UnityEngine.UI;
 /// </summary>
 public class Button : MonoBehaviour
 {
+    /// <summary>
+    /// ボタンの文字を点滅させる
+    /// </summary>
     public IEnumerator Blink()
     {
         const float DERAY = 5.0000001f;
