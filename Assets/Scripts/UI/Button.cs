@@ -10,7 +10,12 @@ public class Button : MonoBehaviour
 {
     COLORS COLORS = new COLORS();
 
-    Text TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
+    Text TEXT;
+
+    void Awake()
+    {
+        TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
+    }
 
     /// <summary>
     /// ボタンの文字を点滅させる
