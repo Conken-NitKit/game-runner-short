@@ -357,6 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 675780715}
   - component: {fileID: 675780716}
+  - component: {fileID: 675780717}
   m_Layer: 5
   m_Name: Outline
   m_TagString: Untagged
@@ -381,7 +382,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 282.2, y: 71.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &675780716
 SpriteRenderer:
@@ -434,6 +435,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!222 &675780717
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675780714}
+  m_CullTransparentMesh: 1
 --- !u!1 &1156664651
 GameObject:
   m_ObjectHideFlags: 0
