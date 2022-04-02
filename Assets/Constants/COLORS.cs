@@ -7,5 +7,5 @@ using UnityEngine;
 /// </summary>
 public class COLORS : MonoBehaviour
 {
-    public Color BUTTON = Color.yellow;
+    public Color BUTTON = Color.white;
 }
