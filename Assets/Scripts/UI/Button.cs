@@ -10,7 +10,7 @@ public class Button : MonoBehaviour
 {
     public IEnumerator Blink()
     {
-        const short DERAY = 5;
+        const float DERAY = 5.0000001f;
         const float INTERVAL = 0.4583333f;
         COLORS COLORS = new COLORS();
         Text TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
