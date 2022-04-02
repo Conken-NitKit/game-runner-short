@@ -12,10 +12,9 @@ public class Button : MonoBehaviour
     {
         const short DERAY = 5;
         COLORS COLORS = new COLORS();
-        Text TEXT = this.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
+        Text TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
 
         yield return new WaitForSeconds(DERAY);
         TEXT.color = COLORS.BUTTON;
-        yield return new WaitForSeconds(DERAY);
     }
 }
