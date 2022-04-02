@@ -17,6 +17,11 @@ public class Button : MonoBehaviour
         TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
     }
 
+    void Start()
+    {
+        StartCoroutine("Blink");
+    }
+
     /// <summary>
     /// ボタンの文字を点滅させる
     /// </summary>
