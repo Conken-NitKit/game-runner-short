@@ -10,8 +10,8 @@ public class Button : MonoBehaviour
     public IEnumerator Blink()
     {
         const short DERAY = 5;
+        GameObject TEXT = transform.Find("Text").gameObject;
 
         yield return new WaitForSeconds(DERAY);
-        gameObject.GetComponent<Text>().color = COLORS.BUTTON;
     }
 }
