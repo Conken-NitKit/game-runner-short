@@ -40,7 +40,6 @@ public class Button : MonoBehaviour
     public void Stop()
     {
         IEnumerator blink;
-
         blink = Blink();
 
         StopCoroutine(blink);
