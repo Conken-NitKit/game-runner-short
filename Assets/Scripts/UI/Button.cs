@@ -8,13 +8,13 @@ using UnityEngine.UI;
 /// </summary>
 public class Button : MonoBehaviour
 {
+    COLORS COLORS = new COLORS();
+
     /// <summary>
     /// ボタンの文字を点滅させる
     /// </summary>
     public IEnumerator Blink()
     {
-        COLORS COLORS = new COLORS();
-
         const float DERAY = 5.0000001f;
         const float INTERVAL = 0.4583333f;
 
