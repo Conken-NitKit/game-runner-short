@@ -37,6 +37,9 @@ public class Button : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// ボタンの文字の点滅を止める
+    /// </summary>
     public void Stop()
     {
         IEnumerator blink;
