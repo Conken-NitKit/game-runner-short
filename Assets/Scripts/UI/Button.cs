@@ -10,5 +10,7 @@ public class Button : MonoBehaviour
     void Blink()
     {
         const short DERAY = 5;
+
+        WaitForSeconds(DERAY);
     }
 }
