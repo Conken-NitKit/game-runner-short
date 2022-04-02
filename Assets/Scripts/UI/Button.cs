@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// 主にボタンのアニメーション
@@ -10,8 +11,11 @@ public class Button : MonoBehaviour
     public IEnumerator Blink()
     {
         const short DERAY = 5;
-        GameObject TEXT = transform.Find("Text").gameObject;
+        COLORS COLORS = new COLORS();
+        Text TEXT = this.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
 
+        yield return new WaitForSeconds(DERAY);
+        TEXT.color = COLORS.BUTTON;
         yield return new WaitForSeconds(DERAY);
     }
 }

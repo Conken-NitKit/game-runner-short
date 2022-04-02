@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            //rb.velocity = new Vector2(0, 0);
+            speed = 0;
 
             Debug.Log("GameOver");
         }
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "GameOver")
         {
-            //rb.velocity = new Vector2(0, 0);
+            speed = 0;
 
             Debug.Log("GameOver");
         }
