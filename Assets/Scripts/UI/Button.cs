@@ -28,5 +28,5 @@ public class Button : MonoBehaviour
         }
     }
 
-    public void Stop() { }
+    public void Stop() { StopCoroutine(Blink); }
 }
