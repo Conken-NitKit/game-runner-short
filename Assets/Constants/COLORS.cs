@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 色
 /// </summary>
-public class COLORS : MonoBehaviour
+public class COLORS
 {
     public Color BUTTON = Color.white;
     public Color BUTTON_LIGHTED = Color.yellow;
