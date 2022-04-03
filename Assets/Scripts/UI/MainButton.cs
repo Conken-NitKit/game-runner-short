@@ -45,7 +45,7 @@ public class MainButton : MonoBehaviour
     /// <summary>
     /// ボタンの文字を点滅させる。
     /// </summary>
-    public IEnumerator Blink()
+    IEnumerator Blink()
     {
         while (true)
         {
@@ -75,7 +75,7 @@ public class MainButton : MonoBehaviour
     /// <summary>
     /// ボタンの外枠を点滅させる。
     /// </summary>
-    public IEnumerator BlinkClicked()
+    IEnumerator BlinkClicked()
     {
         outline.color = COLORS.BUTTON_LIGHTED;
         yield return new WaitForSeconds(INTERVAL);
