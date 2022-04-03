@@ -10,6 +10,17 @@ using TMPro;
 public class Button : MonoBehaviour
 {
     COLORS COLORS = new COLORS();
+    const short TITLE_DELAY = 5;
+    const float TITLE_WAVE = 0.125f;
+    const float TITLE_PLAY_TIME = 0.25f;
+
+    const float INTERVAL = 0.25f;
+    const float COLOR_CHANGES = 3;
+
+    int delayedTitleLength;
+    float playTime;
+
+    float delay;
 
     Text text;
     TextMeshProUGUI title;
@@ -18,6 +29,10 @@ public class Button : MonoBehaviour
     {
         text = transform.Find("Text").gameObject.GetComponent<Text>();
         title = transform.parent.parent.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
+
+        delayedTitleLength = title.text.Length - 1;
+        playTime = TITLE_DELAY + TITLE_PLAY_TIME + TITLE_WAVE * delayedTitleLength;
+        delay = playTime - INTERVAL * COLOR_CHANGES;  //点滅の待ち時間
     }
 
     void Start()
@@ -30,18 +45,6 @@ public class Button : MonoBehaviour
     /// </summary>
     public IEnumerator Blink()
     {
-        const short TITLE_DELAY = 5;
-        const float TITLE_WAVE = 0.125f;
-        const float TITLE_PLAY_TIME = 0.25f;
-
-        const float INTERVAL = 0.25f;
-        const float COLOR_CHANGES = 3;
-
-        int delayedTitleLength = title.text.Length - 1;
-        float playTime = TITLE_DELAY + TITLE_PLAY_TIME + TITLE_WAVE * delayedTitleLength;
-
-        float delay = playTime - INTERVAL * COLOR_CHANGES;  //点滅の待ち時間
-
         while (true)
         {
             yield return new WaitForSeconds(delay);
