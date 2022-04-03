@@ -47,18 +47,17 @@ public class Button : MonoBehaviour
     {
         while (true)
         {
+            text.color = COLORS.BUTTON_LIGHTED;
+            yield return new WaitForSeconds(INTERVAL);
+
+            text.color = COLORS.BUTTON;
+            yield return new WaitForSeconds(INTERVAL);
+
+            text.color = COLORS.BUTTON_LIGHTED;
+            yield return new WaitForSeconds(INTERVAL);
+
+            text.color = COLORS.BUTTON;
             yield return new WaitForSeconds(delay);
-
-            text.color = COLORS.BUTTON_LIGHTED;
-            yield return new WaitForSeconds(INTERVAL);
-
-            text.color = COLORS.BUTTON;
-            yield return new WaitForSeconds(INTERVAL);
-
-            text.color = COLORS.BUTTON_LIGHTED;
-            yield return new WaitForSeconds(INTERVAL);
-
-            text.color = COLORS.BUTTON;
         }
     }
 
