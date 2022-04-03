@@ -85,4 +85,6 @@ public class MainButton : MonoBehaviour
 
         outline.color = COLORS.BUTTON_LIGHTED;
     }
+
+    public void OnClick() { }
 }
