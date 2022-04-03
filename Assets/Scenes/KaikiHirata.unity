@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_filterMode: 1
   m_wrapMode: 1
   m_loadOnStart: 1
-  m_loadOnStartUrl: TitleMovie.gif
+  m_loadOnStartUrl: Title.gif
   m_rotateOnLoading: 0
   m_outputDebugLog: 0
 --- !u!1 &2078176398
