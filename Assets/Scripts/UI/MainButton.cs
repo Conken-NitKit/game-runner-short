@@ -72,6 +72,9 @@ public class MainButton : MonoBehaviour
         text.color = COLORS.BUTTON;
     }
 
+    /// <summary>
+    /// ボタンの外枠を点滅させる。
+    /// </summary>
     public IEnumerator BlinkClicked()
     {
         outline.color = COLORS.BUTTON_LIGHTED;
