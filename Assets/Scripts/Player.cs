@@ -10,9 +10,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
     [SerializeField] private Rigidbody2D rb;
+
+    [SerializeField] private Animator animator;
     private bool isGround;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
+            animator.SetBool("isGround", true);
             isGround = true;
         }
     }
@@ -34,6 +37,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
+            animator.SetBool("isGround", false);
             isGround = false;
         }
     }
@@ -42,6 +46,8 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
+            animator.SetBool("Obstacle", true);
+            animator.SetBool("ObstacleJump", true);
             speed = 0;
 
             Debug.Log("GameOver");
@@ -52,8 +58,6 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "GameOver")
         {
-            speed = 0;
-
             Debug.Log("GameOver");
         }
     }
