@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Score.Manager;
 using UnityEngine;
+using UniRx;
 using Random = System.Random;
 
 namespace Items
@@ -11,7 +12,8 @@ namespace Items
     {
         [SerializeField] private int score;
         [SerializeField] private Animator fruitAnimator;
-        private int animHash = Animator.StringToHash("AnimNumber");
+        readonly int animHash = Animator.StringToHash("AnimNumber");
+        readonly int vanishAnimHash = Animator.StringToHash("isTaken");
 
         public void Start()
         {
@@ -20,8 +22,10 @@ namespace Items
 
         protected override void OnPlayerTaken()
         {
+            fruitAnimator.SetBool(vanishAnimHash,true);
             GameObject.FindWithTag("GameManager").GetComponent<ScoreManager>().IncreaseScore(score);
-            Destroy(this.gameObject);
+            Observable.Timer(TimeSpan.FromMilliseconds(500))
+                 .Subscribe(_ => Destroy(this.gameObject));
         }
     }
 }
