@@ -24,6 +24,7 @@ public class Button : MonoBehaviour
 
     Text text;
     TextMeshProUGUI title;
+    SpriteRenderer outline;
 
     void Awake()
     {
