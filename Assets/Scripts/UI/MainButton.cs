@@ -43,7 +43,7 @@ public class MainButton : MonoBehaviour
     }
 
     /// <summary>
-    /// ボタンの文字を点滅させる
+    /// ボタンの文字を点滅させる。
     /// </summary>
     public IEnumerator Blink()
     {
@@ -64,7 +64,7 @@ public class MainButton : MonoBehaviour
     }
 
     /// <summary>
-    /// ボタンの文字の点滅を止める
+    /// ボタンの文字の点滅を止める。
     /// </summary>
     void Stop()
     {
