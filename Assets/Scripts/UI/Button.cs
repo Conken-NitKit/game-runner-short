@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// 主にボタンのアニメーション
@@ -11,11 +12,12 @@ public class Button : MonoBehaviour
     COLORS COLORS = new COLORS();
 
     Text TEXT;
-    Text Title;
+    TextMeshProUGUI Title;
 
     void Awake()
     {
         TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
+        Title = transform.parent.parent.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     void Start()
