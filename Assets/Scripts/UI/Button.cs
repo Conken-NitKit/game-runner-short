@@ -69,4 +69,6 @@ public class Button : MonoBehaviour
         StopCoroutine("Blink");
         text.color = COLORS.BUTTON;
     }
+
+    public IEnumerator BlinkClicked() { }
 }
