@@ -31,7 +31,7 @@ public class Button : MonoBehaviour
     public IEnumerator Blink()
     {
         const float DERAY = 5.0000001f;
-        const float INTERVAL = 0.4583333f;
+        const float INTERVAL = 0.25f;
 
         while (true)
         {
