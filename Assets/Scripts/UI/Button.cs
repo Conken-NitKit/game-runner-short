@@ -11,12 +11,12 @@ public class Button : MonoBehaviour
 {
     COLORS COLORS = new COLORS();
 
-    Text TEXT;
+    Text text;
     TextMeshProUGUI TITLE;
 
     void Awake()
     {
-        TEXT = transform.Find("Text").gameObject.GetComponent<Text>();
+        text = transform.Find("Text").gameObject.GetComponent<Text>();
         TITLE = transform.parent.parent.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
@@ -37,16 +37,16 @@ public class Button : MonoBehaviour
         {
             yield return new WaitForSeconds(DERAY);
 
-            TEXT.color = COLORS.BUTTON_LIGHTED;
+            text.color = COLORS.BUTTON_LIGHTED;
             yield return new WaitForSeconds(INTERVAL);
 
-            TEXT.color = COLORS.BUTTON;
+            text.color = COLORS.BUTTON;
             yield return new WaitForSeconds(INTERVAL);
 
-            TEXT.color = COLORS.BUTTON_LIGHTED;
+            text.color = COLORS.BUTTON_LIGHTED;
             yield return new WaitForSeconds(INTERVAL);
 
-            TEXT.color = COLORS.BUTTON;
+            text.color = COLORS.BUTTON;
         }
     }
 
