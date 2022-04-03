@@ -1,5 +1,6 @@
 using UnityEngine;
 using Score.Manager;
+using TMPro;
 using UniRx;
 using UI;
 

@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7b8e57192c350449ac9dca9fa8a98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 100
   fruitAnimator: {fileID: 716930834953508167}
 --- !u!95 &716930834953508167
 Animator:

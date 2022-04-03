@@ -24,8 +24,9 @@ namespace Items
         {
             fruitAnimator.SetBool(vanishAnimHash,true);
             GameObject.FindWithTag("GameManager").GetComponent<ScoreManager>().IncreaseScore(score);
-            Observable.Timer(TimeSpan.FromMilliseconds(500))
-                 .Subscribe(_ => Destroy(this.gameObject));
+            Observable.Timer(TimeSpan.FromMilliseconds(600))
+                 .Subscribe(_ => Destroy(this.gameObject))
+                 .AddTo(this);
         }
     }
 }
