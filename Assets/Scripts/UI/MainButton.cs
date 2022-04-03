@@ -91,6 +91,9 @@ public class MainButton : MonoBehaviour
         outline.color = COLORS.BUTTON_LIGHTED;
     }
 
+    /// <summary>
+    /// クリック時の処理
+    /// </summary>
     public void OnClick()
     {
         Stop();
