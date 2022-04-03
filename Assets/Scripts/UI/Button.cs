@@ -30,6 +30,7 @@ public class Button : MonoBehaviour
     /// </summary>
     public IEnumerator Blink()
     {
+        float playTime = (title.text.Length - 1) * 0.125f + 0.25f + 5;
         const float DERAY = 5.0000001f;
         const float INTERVAL = 0.25f;
 
