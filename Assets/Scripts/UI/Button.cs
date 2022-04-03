@@ -30,6 +30,7 @@ public class Button : MonoBehaviour
     {
         text = transform.Find("Text").gameObject.GetComponent<Text>();
         title = transform.parent.parent.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
+        outline = transform.parent.gameObject.GetComponent<SpriteRenderer>();
 
         delayedTitleLength = title.text.Length - 1;
         playTime = TITLE_DELAY + TITLE_PLAY_TIME + TITLE_WAVE * delayedTitleLength;
