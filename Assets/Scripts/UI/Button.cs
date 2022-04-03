@@ -14,7 +14,7 @@ public class Button : MonoBehaviour
     const float TITLE_WAVE = 0.125f;
     const float TITLE_PLAY_TIME = 0.25f;
 
-    const float INTERVAL = 0.25f;
+    const float INTERVAL = 0.125f;
     const float COLOR_CHANGES = 3;
 
     int delayedTitleLength;
