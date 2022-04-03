@@ -12,12 +12,12 @@ public class Button : MonoBehaviour
     COLORS COLORS = new COLORS();
 
     Text text;
-    TextMeshProUGUI TITLE;
+    TextMeshProUGUI title;
 
     void Awake()
     {
         text = transform.Find("Text").gameObject.GetComponent<Text>();
-        TITLE = transform.parent.parent.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
+        title = transform.parent.parent.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
     }
 
     void Start()
