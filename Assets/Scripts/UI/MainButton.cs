@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using GFramework;
 
 /// <summary>
 /// 主にボタンのアニメーション
@@ -10,6 +12,9 @@ using TMPro;
 public class MainButton : MonoBehaviour
 {
     COLORS COLORS = new COLORS();
+
+    const short PREFIX_INTERVAL = 1000;
+
     const short TITLE_DELAY = 5;
     const float TITLE_WAVE = 0.125f;
     const float TITLE_PLAY_TIME = 0.25f;
@@ -24,13 +29,13 @@ public class MainButton : MonoBehaviour
 
     Text text;
     TextMeshProUGUI title;
-    SpriteRenderer outline;
+    SimpleRoundedImage outline;
 
     void Awake()
     {
         text = transform.Find("Text").gameObject.GetComponent<Text>();
         title = transform.parent.parent.Find("Title").gameObject.GetComponent<TextMeshProUGUI>();
-        outline = transform.parent.gameObject.GetComponent<SpriteRenderer>();
+        outline = transform.parent.gameObject.GetComponent<SimpleRoundedImage>();
 
         delayedTitleLength = title.text.Length - 1;
         playTime = TITLE_DELAY + TITLE_PLAY_TIME + TITLE_WAVE * delayedTitleLength;
@@ -75,13 +80,13 @@ public class MainButton : MonoBehaviour
     /// <summary>
     /// ボタンの外枠を点滅させる。
     /// </summary>
-    IEnumerator BlinkClicked()
+    void BlinkClicked()
     {
         outline.color = COLORS.BUTTON_LIGHTED;
-        yield return new WaitForSeconds(INTERVAL);
+        Thread.Sleep((int)(INTERVAL * PREFIX_INTERVAL));
 
         outline.color = COLORS.BUTTON;
-        yield return new WaitForSeconds(INTERVAL);
+        Thread.Sleep((int)(INTERVAL * PREFIX_INTERVAL));
 
         outline.color = COLORS.BUTTON_LIGHTED;
     }
@@ -89,5 +94,6 @@ public class MainButton : MonoBehaviour
     public void OnClick()
     {
         Stop();
+        BlinkClicked();
     }
 }
