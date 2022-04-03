@@ -30,13 +30,21 @@ public class Button : MonoBehaviour
     /// </summary>
     public IEnumerator Blink()
     {
-        float playTime = (title.text.Length - 1) * 0.125f + 0.25f + 5;
-        const float DERAY = 5.0000001f;
+        const short TITLE_DELAY = 5;
+        const float TITLE_WAVE = 0.125f;
+        const float TITLE_PLAY_TIME = 0.25f;
+
         const float INTERVAL = 0.25f;
+        const float COLOR_CHANGES = 3;
+
+        int delayedTitleLength = title.text.Length - 1;
+        float playTime = TITLE_DELAY + TITLE_PLAY_TIME + TITLE_WAVE * delayedTitleLength;
+
+        float delay = playTime - INTERVAL * COLOR_CHANGES;  //点滅の待ち時間
 
         while (true)
         {
-            yield return new WaitForSeconds(DERAY);
+            yield return new WaitForSeconds(delay);
 
             text.color = COLORS.BUTTON_LIGHTED;
             yield return new WaitForSeconds(INTERVAL);
