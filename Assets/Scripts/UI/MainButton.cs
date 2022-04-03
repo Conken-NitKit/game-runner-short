@@ -7,7 +7,7 @@ using TMPro;
 /// <summary>
 /// 主にボタンのアニメーション
 /// </summary>
-public class Button : MonoBehaviour
+public class MainButton : MonoBehaviour
 {
     COLORS COLORS = new COLORS();
     const short TITLE_DELAY = 5;
