@@ -67,5 +67,6 @@ public class Button : MonoBehaviour
     public void Stop()
     {
         StopCoroutine("Blink");
+        text.color = COLORS.BUTTON;
     }
 }
