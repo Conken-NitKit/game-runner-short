@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -80,13 +80,13 @@ public class MainButton : MonoBehaviour
     /// <summary>
     /// ボタンの外枠を点滅させる。
     /// </summary>
-    void BlinkClicked()
+    IEnumerator BlinkClicked()
     {
         outline.color = COLORS.BUTTON_LIGHTED;
-        Thread.Sleep((int)(INTERVAL * PREFIX_INTERVAL));
+        yield return new WaitForSeconds(INTERVAL);
 
         outline.color = COLORS.BUTTON;
-        Thread.Sleep((int)(INTERVAL * PREFIX_INTERVAL));
+        yield return new WaitForSeconds(INTERVAL);
 
         outline.color = COLORS.BUTTON_LIGHTED;
     }
@@ -94,6 +94,6 @@ public class MainButton : MonoBehaviour
     public void OnClick()
     {
         Stop();
-        BlinkClicked();
+        StartCoroutine("BlinkClicked");
     }
 }
