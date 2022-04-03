@@ -72,5 +72,14 @@ public class Button : MonoBehaviour
         text.color = COLORS.BUTTON;
     }
 
-    public IEnumerator BlinkClicked() { }
+    public IEnumerator BlinkClicked()
+    {
+        outline.color = COLORS.BUTTON_LIGHTED;
+        yield return new WaitForSeconds(INTERVAL);
+
+        outline.color = COLORS.BUTTON;
+        yield return new WaitForSeconds(INTERVAL);
+
+        outline.color = COLORS.BUTTON_LIGHTED;
+    }
 }
