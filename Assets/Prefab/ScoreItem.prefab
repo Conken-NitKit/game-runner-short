@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6398389571379708022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.2686, y: 3.133, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7b8e57192c350449ac9dca9fa8a98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  score: 100
   fruitAnimator: {fileID: 716930834953508167}
 --- !u!95 &716930834953508167
 Animator:

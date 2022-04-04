@@ -1,9 +1,12 @@
+using System;
 using UniRx;
 using UnityEngine;
 
 namespace Score.Manager
 {
     public class ScoreManager : MonoBehaviour{
+
+        [SerializeField] private SoundManager soundManager;
         public IReadOnlyReactiveProperty<int> Score => score;
         private readonly IntReactiveProperty score = new IntReactiveProperty(0);
 
@@ -13,6 +16,7 @@ namespace Score.Manager
         public void IncreaseScore(int scoreOffset)
         {
             score.Value += scoreOffset;
+            soundManager.PlaySeByName("ItemGetSE");        
         }
 
         private void OnDestroy()

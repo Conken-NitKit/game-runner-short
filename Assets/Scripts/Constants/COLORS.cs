@@ -7,6 +7,6 @@ using UnityEngine;
 /// </summary>
 public class COLORS
 {
-    public Color BUTTON = Color.white;
-    public Color BUTTON_LIGHTED = Color.yellow;
+    public Color BUTTON = new Color(79/255f, 161/255f, 134/255f);
+    public Color BUTTON_LIGHTED = new Color(114/255f, 190/255f, 166/255f);
 }

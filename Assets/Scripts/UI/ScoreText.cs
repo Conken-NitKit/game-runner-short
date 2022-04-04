@@ -18,7 +18,7 @@ namespace UI
         {
             nowNumber = int.Parse(text.text);
             DOTween.To(() => nowNumber, (n) => nowNumber = n, value, 0.6f)
-                .OnUpdate(() => text.text = nowNumber.ToString("#,0"));
+                .OnUpdate(() => text.text = nowNumber.ToString());
         }
     }
 }

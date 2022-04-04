@@ -1,28 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 /// <summary>
-/// áŠQ•¨‚ğ¶¬‚·‚éƒXƒNƒŠƒvƒg
+/// ï¿½ï¿½Qï¿½ï¿½ï¿½ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½Nï¿½ï¿½ï¿½vï¿½g
 /// </summary>
 public class GenerateObstacle : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstacles;
-    [SerializeField] private GameObject player;
+    [SerializeField] private Transform playerTransform;
 
     [SerializeField] private float spawnPoint = 20;
-    [SerializeField] private float spawnChecker = 10;
+    [SerializeField] private float spawnInterval;
     [SerializeField] private float obstaclePositionY = -4;
 
     private int randomNumber;
 
-    void FixedUpdate()
+    private void Start()
     {
-        if (player.transform.position.x > spawnPoint - spawnChecker)
+        StartCoroutine("SpawnObstacle");
+    }
+
+    IEnumerator SpawnObstacle()
+    {
+        while (true)
         {
-            randomNumber = Random.Range(0, obstacles.Length);
-            Instantiate(obstacles[randomNumber], new Vector3(spawnPoint, obstaclePositionY, 0), Quaternion.identity);
-            
+            Instantiate(obstacles[Random.Range(0, obstacles.Length)], new Vector3(playerTransform.position.x + spawnPoint, obstaclePositionY, 0), Quaternion.identity);
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
+
 }
