@@ -53,6 +53,11 @@ public class SceneTransitionAnimation : MonoBehaviour
                 new Vector3(12.6f, 12.6f, 0f) * sceneTransitionDirection, moveSeconds)
                 .SetRelative();
 
+            //回転する
+            titleSceneTransitionObjectParent.transform.GetChild(i).gameObject.transform.DOLocalRotate(
+                new Vector3(0, 0, 225f), 2f,
+                RotateMode.FastBeyond360);
+
             await UniTask.Delay(intervalMoveMilliseconds);
         }
     }
