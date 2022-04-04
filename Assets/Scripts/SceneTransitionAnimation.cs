@@ -55,7 +55,7 @@ public class SceneTransitionAnimation : MonoBehaviour
 
             //回転する
             titleSceneTransitionObjectParent.transform.GetChild(i).gameObject.transform.DOLocalRotate(
-                new Vector3(0, 0, 225f), 2f,
+                new Vector3(0, 0, 225f), 1.5f,
                 RotateMode.FastBeyond360);
 
             await UniTask.Delay(intervalMoveMilliseconds);
@@ -67,7 +67,7 @@ public class SceneTransitionAnimation : MonoBehaviour
     /// </summary>
     public void OpenGameSceneTransition()
     {
-        gameSceneTransitionObject.transform.DOScale(new Vector3(0f, 0f), 1f);
+        gameSceneTransitionObject.transform.DOScale(new Vector3(0f, 0f), 2f);
     }
 
     /// <summary>
@@ -84,7 +84,7 @@ public class SceneTransitionAnimation : MonoBehaviour
         );
         sequence.Append(
             gameSceneTransitionObject.transform.DOScale(
-            new Vector3(50f, 50f), 1f)
+            new Vector3(22f, 22f), 1f)
         );
          
         sequence.Play();

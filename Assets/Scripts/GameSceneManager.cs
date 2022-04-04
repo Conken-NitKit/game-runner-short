@@ -9,6 +9,8 @@ public class GameSceneManager : MonoBehaviour
     [SerializeField] private SoundManager soundManager;
     [SerializeField] private Player player;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private SceneTransitionAnimation sceneTransitionAnimation;
+
     void Start()
     {
         StartCoroutine(GameStartCouroutine());
@@ -21,6 +23,8 @@ public class GameSceneManager : MonoBehaviour
 
     private IEnumerator GameStartCouroutine()
     {
+        sceneTransitionAnimation.OpenTitleSceneTransition();
+        yield return new WaitForSeconds(2f);
         soundManager.PlaySeByName("ReadyVoice");
         yield return new WaitForSeconds(1);
         soundManager.PlaySeByName("GoVoice (mp3cut.net)");
