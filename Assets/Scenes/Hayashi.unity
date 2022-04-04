@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542490730}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ecd82447d692413b9a35d8d7bea9719, type: 3}
+  m_Script: {fileID: 11500000, guid: 261971cc400554cc189405a3ae78f019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneTransitionAnimation: {fileID: 1542490731}
