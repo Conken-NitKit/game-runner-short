@@ -73,13 +73,13 @@ public class SceneTransitionAnimation : MonoBehaviour
         var sequence = DOTween.Sequence();
 
         sequence.Append(
-            gameSceneTransitionObject.transform.DOJump(
+            gameSceneTransitionObject.transform.DOLocalJump(
             new Vector3(0f, 0f, 0f), jumpPower: 2f, numJumps: 5, duration: 3f)
             .SetEase(Ease.OutSine)
         );
         sequence.Append(
             gameSceneTransitionObject.transform.DOScale(
-            new Vector3(21f, 21f), 1f)
+            new Vector3(50f, 50f), 1f)
         );
          
         sequence.Play();
