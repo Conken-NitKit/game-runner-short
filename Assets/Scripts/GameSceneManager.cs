@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Score.Manager;
+using TMPro;
 using UnityEngine;
 using UniRx;
 
@@ -10,6 +12,8 @@ public class GameSceneManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private SceneTransitionAnimation sceneTransitionAnimation;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private ScoreManager scoreManager;
 
     void Start()
     {
@@ -37,6 +41,7 @@ public class GameSceneManager : MonoBehaviour
         soundManager.StopBgm();
         soundManager.PlaySeByName("Hit");
         yield return new WaitForSeconds(1);
+        scoreText.text = scoreManager.Score.ToString();
         gameOverPanel.SetActive(true);
     }
 }
